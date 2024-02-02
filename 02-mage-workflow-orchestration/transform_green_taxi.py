@@ -31,7 +31,7 @@ def transform(data, *args, **kwargs):
              )
 
 
-    return data[(data['passenger_count'] > 0) & data['trip_distance'] > 0]
+    return data[(data['passenger_count'] > 0) & (data['trip_distance'] > 0)]
    
 
 
@@ -40,6 +40,6 @@ def test_output(output, *args) -> None:
     """
     Template code for testing the output of the block.
     """
-    assert 'vendor_id' in output.columns, "vendor_id column exist"
+    assert 'vendor_id' in output.columns, "vendor_id column does not exist"
     assert output['passenger_count'].isin([0]).sum() == 0, "There are rides with zero passenger" 
     assert output['trip_distance'].isin([0]).sum()  == 0, "There are rides with zero trip distance"

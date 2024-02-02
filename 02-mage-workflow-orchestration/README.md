@@ -5,3 +5,4 @@ Files relevant to hw #2:
 - transform_green_taxi.py
 - export_green_to_postgres.sql
 - export_green_to_gcp.py 	
+- triggers.yaml
